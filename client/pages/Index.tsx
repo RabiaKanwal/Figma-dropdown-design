@@ -68,38 +68,38 @@ export default function Index() {
               <label className="text-lg font-medium text-gray-700 block">
                 Occupation
               </label>
-              
+
               <Select
                 value={selectedOccupation}
                 onValueChange={setSelectedOccupation}
               >
                 <SelectTrigger className="w-full h-14 px-4 text-base border-2 border-gray-200 rounded-xl bg-white hover:border-gray-300 focus:border-blue-500 focus:ring-0 transition-colors">
-                  <SelectValue 
-                    placeholder="Select Occupation" 
+                  <SelectValue
+                    placeholder="Select Occupation"
                     className="text-gray-500"
                   />
                 </SelectTrigger>
                 <SelectContent className="bg-white border-2 border-gray-200 rounded-xl shadow-lg">
-                  <SelectItem 
-                    value="businessman" 
+                  <SelectItem
+                    value="businessman"
                     className="h-12 px-4 text-base hover:bg-gray-50 focus:bg-gray-50 cursor-pointer"
                   >
                     Businessman
                   </SelectItem>
-                  <SelectItem 
-                    value="employee" 
+                  <SelectItem
+                    value="employee"
                     className="h-12 px-4 text-base hover:bg-gray-50 focus:bg-gray-50 cursor-pointer"
                   >
                     Employee
                   </SelectItem>
-                  <SelectItem 
-                    value="freelancer" 
+                  <SelectItem
+                    value="freelancer"
                     className="h-12 px-4 text-base hover:bg-gray-50 focus:bg-gray-50 cursor-pointer"
                   >
                     Freelancer
                   </SelectItem>
-                  <SelectItem 
-                    value="retired" 
+                  <SelectItem
+                    value="retired"
                     className="h-12 px-4 text-base hover:bg-gray-50 focus:bg-gray-50 cursor-pointer"
                   >
                     Retired
@@ -111,7 +111,11 @@ export default function Index() {
             {selectedOccupation && (
               <div className="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
                 <p className="text-emerald-700 text-sm">
-                  Selected: <span className="font-medium">{selectedOccupation.charAt(0).toUpperCase() + selectedOccupation.slice(1)}</span>
+                  Selected:{" "}
+                  <span className="font-medium">
+                    {selectedOccupation.charAt(0).toUpperCase() +
+                      selectedOccupation.slice(1)}
+                  </span>
                 </p>
               </div>
             )}
